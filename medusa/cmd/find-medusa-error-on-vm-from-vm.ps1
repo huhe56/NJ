@@ -1,0 +1,7 @@
+﻿Write-Output ""
+Write-Output "------------ $env:COMPUTERNAME -------------"
+Write-Output ""
+findstr /s /i error c:\test\medusa *.log | findstr /v "label=error" | findstr /v /c:"no error" | findstr /v /c:"-v Retry count on error"
+findstr /s /i error e:\test\medusa *.log | findstr /v "label=error" | findstr /v /c:"no error" | findstr /v /c:"-v Retry count on error" | findstr /v /c:"loop error event handlers" | findstr /v /c:"-O Override base offset"
+findstr /s /i error f:\test\medusa *.log | findstr /v "label=error" | findstr /v /c:"no error" | findstr /v /c:"-v Retry count on error" | findstr /v /c:"loop error event handlers" | findstr /v /c:"-O Override base offset"
+findstr /s /i error g:\test\medusa *.log | findstr /v "label=error" | findstr /v /c:"no error" | findstr /v /c:"-v Retry count on error" | findstr /v /c:"loop error event handlers" | findstr /v /c:"-O Override base offset"

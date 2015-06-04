@@ -1,0 +1,2 @@
+﻿
+findstr /s /i error z:\log\medusa *.log | findstr /v "label=error" | findstr /v /c:"no error" | findstr /v /c:"-v Retry count on error" | findstr /v /c:"loop error event handlers" | findstr /v /c:"-O Override base offset"
